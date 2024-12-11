@@ -3,18 +3,13 @@ plugins {
 }
 
 version = '1.0-SNAPSHOT'
+project.ext.lwjglVersion = "3.2.3"
+project.ext.jomlVersion = "1.10.7"
+project.ext.lwjglNatives = "natives-windows"
+
 repositories {
     mavenCentral()
 }
-
-dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-project.ext.lwjglVersion = "3.2.3"
-project.ext.jomlVersion = "1.10.7"
-project.ext.lwjglNatives = "natives-linux"
-
 
 dependencies {
     implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
